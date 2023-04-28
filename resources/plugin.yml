@@ -1,0 +1,9 @@
+name: KEP
+version: '0.0.1'
+api-version: 1.19
+main: krekkers.prison.KrekksPrison
+prefix: KEP
+website: ""
+authors: [ Krekkers ]
+description: Krekks Prison
+
