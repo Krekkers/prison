@@ -1,0 +1,9 @@
+cells:
+  A:
+    location:
+      world: BlockA
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    owner: "Krekkers"
+    price: 200
