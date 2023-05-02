@@ -1,0 +1,54 @@
+
+
+settings:
+  database:
+    type: "mysqli" #mysql or mysqli
+    url: "localhost"
+    user: "root"
+    pass: "password"
+    table_prefix: "KPrison_"
+  vault:
+    enable: false
+
+prisoner-levels:
+  A:
+    name: "A"
+    unlock: 0 #unlock level
+    reward: "default"
+  B:
+    name: "B"
+    unlock: 5
+    reward: "B"
+
+worlds:
+  spawn:
+    name: "spawn"
+    location:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+  kitchen:
+    name: "kitchen"
+    location:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+  cellblockA:
+    name: "cellblockA"
+    location:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+
+rewards:
+  default:
+    items:
+      - "DIAMOND"
+    exp: 20
+    message: "You just got the Default reward!"
+  B:
+    items:
+      - "DIAMOND"
+    exp: 20
+    message: "You just got the Default reward!"
+

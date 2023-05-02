@@ -1,0 +1,23 @@
+cops:
+  1:
+    name: "Mr mc.donutson"
+    skinURL: "http:"
+    bribe:
+      bribe-able: false
+      bribe-items:
+        - Diamond
+        - Bread
+        - Gold
+      spawn:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      patrol:
+        1:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        2:
+          x: 0.0
+          y: 0.0
+          z: 0.0
