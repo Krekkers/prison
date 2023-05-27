@@ -1,14 +1,18 @@
-
-
 settings:
   database:
     type: "mysqli" #mysql or mysqli
     url: "localhost"
     user: "root"
-    pass: "password"
+    pass: ""
     table_prefix: "KPrison_"
   vault:
     enable: false
+  colors:
+    primary: GREEN
+    secondary: RED
+    gray: LIGHT_GRAY
+    error: DARK_RED
+    info: AQUA
 
 prisoner-levels:
   A:

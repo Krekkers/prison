@@ -1,10 +1,12 @@
 package krekkers.prison.menu.menu.cop;
 
+import krekkers.prison.cop.Cop;
 import krekkers.prison.menu.Menu;
 import krekkers.prison.menu.MenuUtility;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class Bribe extends Menu {
+    Cop cop;
     public Bribe(MenuUtility utility) {
         super(utility);
     }
@@ -28,4 +30,11 @@ public class Bribe extends Menu {
     public void handleMenu(InventoryClickEvent e) {
 
     }
+
+    private boolean isValidTradeItem(){
+
+        return false;
+    }
+
+
 }

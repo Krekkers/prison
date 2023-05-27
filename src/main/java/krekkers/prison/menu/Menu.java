@@ -3,12 +3,14 @@ package krekkers.prison.menu;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.block.data.type.Switch;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -22,6 +24,10 @@ public abstract class Menu implements InventoryHolder {
 
     public abstract String getMenuName();
     public abstract int getSlots();
+
+    /**
+     * Use this function to fill the inventory with items
+     */
     public abstract void setMenuItems();
 
     /**
@@ -39,15 +45,14 @@ public abstract class Menu implements InventoryHolder {
          menuUtility.getOwner().openInventory(inventory);
     }
 
-    public void closeMenu(){
-        menuUtility.getOwner().closeInventory();
-    }
+    /**
+     * Closes the menu
+     */
+    public void closeMenu(){ menuUtility.getOwner().closeInventory(); }
 
     public void fillInventoryWith(ItemStack item) {
         for (int i = 0; i < getSlots(); i++) {
-            if (inventory.getItem(i) == null) {
-                inventory.setItem(i, item);
-            }
+            if (inventory.getItem(i) == null) inventory.setItem(i, item);
         }
     }
 
@@ -61,7 +66,6 @@ public abstract class Menu implements InventoryHolder {
         String n = "&9[&c" + name + "&9]";
         return ChatColor.translateAlternateColorCodes('&', n);
     }
-
     /**
      * change a item in this specific inventory
      * @param slot
@@ -102,6 +106,20 @@ public abstract class Menu implements InventoryHolder {
         item.setItemMeta(meta);
         return item;
     }
+    /**
+     * Creates a new item at slot
+     * @param name
+     * @param slot
+     * @param material
+     * @param lore
+     */
+    public void newItemAtSlot(String name, int slot ,Material material, String... lore){
+        ItemStack item = new ItemStack(material);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
+        item.setItemMeta(meta);
+        inventory.setItem(slot,item);
+    }
 
     /**
      * made to use less code in menu
@@ -112,9 +130,14 @@ public abstract class Menu implements InventoryHolder {
         inventory.setItem(slot, item);
     }
 
-    public void addItemsToInventory(HashMap<Integer, ItemStack> items){
+    /**
+     * Adds an arraylist of items
+     * @param items
+     */
+    public void addItemsToInventory(ArrayList<ItemStack> items){
         for(int i = 0; i < inventory.getSize(); i++){
-            if(items.get(i) != null) inventory.setItem(i, items.get(i));
+            if(items.get(i) != null && inventory.getItem(i) != null)
+                inventory.setItem(i, items.get(i));
         }
     }
 

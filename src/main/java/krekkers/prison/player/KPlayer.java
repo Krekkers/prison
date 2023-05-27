@@ -1,11 +1,15 @@
 package krekkers.prison.player;
 
 import krekkers.prison.cell.Cell;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.ArrayList;
 
 public class KPlayer {
     KPlayer player;
     String name;
     Cell cell;
+    ArrayList<ItemStack> bankItems = new ArrayList<>();
 
     public KPlayer(KPlayer player, String name, Cell cell){
         this.player = player;
@@ -31,7 +35,9 @@ public class KPlayer {
     //set cell
     public void setCell(Cell newCell){
         cell = newCell;
-        
+    }
+    public ArrayList<ItemStack> getBankItems(){
+        return this.bankItems;
     }
 
 }

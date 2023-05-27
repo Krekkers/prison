@@ -10,6 +10,7 @@ public class Cop {
 
     Entity cop;
     String name;
+    int copID;
 
     Location spawn;
     private List<Location> destinationList;

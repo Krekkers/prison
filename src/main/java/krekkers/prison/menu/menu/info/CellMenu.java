@@ -28,6 +28,9 @@ public class CellMenu extends Menu {
 
     @Override
     public void setMenuItems() {
+
+
+
         setItem(1, menuButton1);
         fillInventoryWith(menuButton1);
     }
