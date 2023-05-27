@@ -9,6 +9,9 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.HashMap;
+import java.util.List;
+
 public abstract class Menu implements InventoryHolder {
     protected Inventory inventory;
     protected MenuUtility menuUtility;
@@ -107,6 +110,12 @@ public abstract class Menu implements InventoryHolder {
      */
     public void setItem(int slot, ItemStack item){
         inventory.setItem(slot, item);
+    }
+
+    public void addItemsToInventory(HashMap<Integer, ItemStack> items){
+        for(int i = 0; i < inventory.getSize(); i++){
+            if(items.get(i) != null) inventory.setItem(i, items.get(i));
+        }
     }
 
 }

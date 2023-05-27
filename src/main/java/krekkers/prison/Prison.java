@@ -1,10 +1,18 @@
 package krekkers.prison;
 
+import krekkers.prison.event.ConnectEvent;
+import krekkers.prison.event.Interact;
+import krekkers.prison.event.Move;
 import org.bukkit.Bukkit;
+import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
+import java.io.IOException;
 
 public final class Prison extends JavaPlugin {
 
@@ -38,8 +46,17 @@ public final class Prison extends JavaPlugin {
     }
 
     public void registerEvents(){
-
+        PLUGINMANAGER.registerEvents(new Interact(), this);
+        PLUGINMANAGER.registerEvents(new Move(), this);
+        PLUGINMANAGER.registerEvents(new ConnectEvent(), this);
     }
+
+    public void copConfigInit(){
+        Configuration configuration;
+        configuration = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "cops.yml"));
+    }
+
+
 
 
 }

@@ -9,6 +9,9 @@ public class Config {
 
 
 
+
+
+
     public Config(FileConfiguration config, FileConfiguration copConfig){
         this.config = config;
         this.copConfig = copConfig;

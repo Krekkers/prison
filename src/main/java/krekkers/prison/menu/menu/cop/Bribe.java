@@ -11,7 +11,7 @@ public class Bribe extends Menu {
 
     @Override
     public String getMenuName() {
-        return null;
+        return "Bribing";
     }
 
     @Override
