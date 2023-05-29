@@ -1,5 +1,6 @@
 package krekkers.prison.menu.menu.info;
 
+import krekkers.prison.cell.Cell;
 import krekkers.prison.menu.Menu;
 import krekkers.prison.menu.MenuUtility;
 import org.bukkit.Material;
@@ -7,8 +8,11 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class CellMenu extends Menu {
-    public CellMenu(MenuUtility utility) {
+    Cell cell;
+
+    public CellMenu(MenuUtility utility, Cell cell) {
         super(utility);
+        this.cell = cell;
     }
 
     //start item list
@@ -18,7 +22,7 @@ public class CellMenu extends Menu {
 
     @Override
     public String getMenuName() {
-        return "Cell Info : ";
+        return "Cell Info : " + cell.getOwner().getDisplayName();
     }
 
     @Override
@@ -28,8 +32,6 @@ public class CellMenu extends Menu {
 
     @Override
     public void setMenuItems() {
-
-
 
         setItem(1, menuButton1);
         fillInventoryWith(menuButton1);

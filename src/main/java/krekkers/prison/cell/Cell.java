@@ -46,6 +46,9 @@ public class Cell {
         this.spawn = spawn;
     }
 
+    public Player getOwner(){
+        return null;
+    }
     /**
      * Sends player to cell
      * @param player

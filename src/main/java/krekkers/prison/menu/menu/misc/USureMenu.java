@@ -6,6 +6,8 @@ import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
+import static krekkers.prison.Prison.config;
+
 public class USureMenu extends Menu {
 
     public Menu redirectMenu;
@@ -17,7 +19,7 @@ public class USureMenu extends Menu {
 
     @Override
     public String getMenuName() {
-        return decoratedName("&cAre you sure?");
+        return decoratedName(config.error + "Are you sure?");
     }
 
     @Override
@@ -37,7 +39,6 @@ public class USureMenu extends Menu {
     @Override
     public void handleMenu(InventoryClickEvent e) {
         if(e.getCurrentItem().getType() == Material.GREEN_WOOL){
-
             redirectMenu.openMenu();
         }
         if(e.getCurrentItem().getType() == Material.RED_WOOL){

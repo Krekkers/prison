@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static krekkers.prison.Prison.config;
+
 public abstract class Menu implements InventoryHolder {
     protected Inventory inventory;
     protected MenuUtility menuUtility;
@@ -63,8 +65,7 @@ public abstract class Menu implements InventoryHolder {
 
     //extra functionality
     public String decoratedName(String name){
-        String n = "&9[&c" + name + "&9]";
-        return ChatColor.translateAlternateColorCodes('&', n);
+        return config.secondary + "[" + config.primary + name + config.secondary + "]";
     }
     /**
      * change a item in this specific inventory

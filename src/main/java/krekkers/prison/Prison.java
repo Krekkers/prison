@@ -20,6 +20,7 @@ public final class Prison extends JavaPlugin {
     public PluginManager PLUGINMANAGER;
     private FileConfiguration defaultConfig = null;
 
+
     public static Config config;
 
     @Override
@@ -30,7 +31,7 @@ public final class Prison extends JavaPlugin {
         //config
         PLUGIN.saveDefaultConfig();
         defaultConfig = PLUGIN.getConfig();
-        config = new Config(defaultConfig,defaultConfig);
+        config = new Config(defaultConfig,defaultConfig,defaultConfig);
         //register commands and events
         registerCommands();
         registerEvents();
