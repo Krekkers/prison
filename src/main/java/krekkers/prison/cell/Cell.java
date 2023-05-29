@@ -4,14 +4,16 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
-
+/*
+Maybe idea:
+Just have 1 cell but players get turned invisable and make 0 noise?
+ */
 public class Cell {
 
     String name;
     double price;
     Location spawn;
-    int cellID;
-    UUID cellOwnerUUID;
+    UUID cellID;
 
     public Cell(String name, double price, Location spawn){
         this.name = name;
@@ -44,22 +46,6 @@ public class Cell {
 
     public void setSpawn(Location spawn) {
         this.spawn = spawn;
-    }
-
-    public Player getOwner(){
-        return null;
-    }
-    /**
-     * Sends player to cell
-     * @param player
-     * @return if player owns cell true else false
-     */
-    public boolean sendPlayerToCell(Player player){
-        if(player.getUniqueId() == cellOwnerUUID)
-            player.teleport(getSpawn());
-        else
-            return false;
-        return true;
     }
 
 

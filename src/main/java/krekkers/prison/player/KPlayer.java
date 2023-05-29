@@ -1,23 +1,29 @@
 package krekkers.prison.player;
 
 import krekkers.prison.cell.Cell;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
 public class KPlayer {
-    KPlayer player;
+    Player player;
     String name;
     Cell cell;
     ArrayList<ItemStack> bankItems = new ArrayList<>();
 
-    public KPlayer(KPlayer player, String name, Cell cell){
+    /**
+     * @param player player class
+     * @param name name of player
+     * @param cell cannot be null else will default to lowest
+     */
+    public KPlayer(Player player, String name, Cell cell){
         this.player = player;
         this.name = name;
         this.cell = cell;
     }
     //get player
-    public KPlayer getPlayer() {
+    public Player getPlayer() {
         return player;
     }
     //get name
@@ -40,4 +46,7 @@ public class KPlayer {
         return this.bankItems;
     }
 
+    public void movePlayerToCell(){
+        player.teleport(cell.getSpawn());
+    }
 }

@@ -12,7 +12,6 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.io.IOException;
 
 public final class Prison extends JavaPlugin {
 
