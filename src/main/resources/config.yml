@@ -1,6 +1,6 @@
 settings:
   database:
-    type: "mysqli" #mysql or mysqli
+    type: "mysqli" #mysql or mysqli or yml
     url: "localhost"
     user: "root"
     pass: ""
@@ -23,26 +23,6 @@ prisoner-levels:
     name: "B"
     unlock: 5
     reward: "B"
-
-worlds:
-  spawn:
-    name: "spawn"
-    location:
-      x: 0.0
-      y: 0.0
-      z: 0.0
-  kitchen:
-    name: "kitchen"
-    location:
-      x: 0.0
-      y: 0.0
-      z: 0.0
-  cellblockA:
-    name: "cellblockA"
-    location:
-      x: 0.0
-      y: 0.0
-      z: 0.0
 
 rewards:
   default:

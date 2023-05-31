@@ -11,6 +11,10 @@ public class KPlayer {
     String name;
     Cell cell;
     ArrayList<ItemStack> bankItems = new ArrayList<>();
+    public double behaviourScore;
+    double balance;
+
+
 
     /**
      * @param player player class

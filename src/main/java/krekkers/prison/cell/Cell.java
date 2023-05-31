@@ -48,5 +48,4 @@ public class Cell {
         this.spawn = spawn;
     }
 
-
 }

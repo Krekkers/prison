@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 public class CellMenu extends Menu {
     Cell cell;
 
-    public CellMenu(MenuUtility utility, Cell cell) {
+    public CellMenu(MenuUtility utility) {
         super(utility);
         this.cell = cell;
     }
@@ -22,7 +22,7 @@ public class CellMenu extends Menu {
 
     @Override
     public String getMenuName() {
-        return "Cell Info : " + cell.getOwner().getDisplayName();
+        return "Cell Info :";
     }
 
     @Override

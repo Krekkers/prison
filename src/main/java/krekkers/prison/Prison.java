@@ -56,6 +56,10 @@ public final class Prison extends JavaPlugin {
         configuration = YamlConfiguration.loadConfiguration(new File(getDataFolder(), "cops.yml"));
     }
 
+    public void craftingRecipies(){
+
+    }
+
 
 
 
