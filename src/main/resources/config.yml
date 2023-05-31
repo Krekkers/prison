@@ -24,6 +24,23 @@ prisoner-levels:
     unlock: 5
     reward: "B"
 
+rooms:
+  room1:
+    name: "Kitchen"
+    description:
+      - "line 1"
+      - "line 2 with &ccolor"
+    allowed: true
+    location:
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 90
+    icon: DIAMOND
+
+
+
 rewards:
   default:
     items:

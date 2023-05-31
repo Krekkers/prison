@@ -15,9 +15,8 @@ public class PrisonManager {
     PlayerManager playerManager = new PlayerManager();
     RewardManager rewardManager = new RewardManager();
 
-
-
-    HashMap<UUID, Cell> cellMap;
+    //String = name
+    HashMap<String, Cell> cellMap;
 
     public PrisonManager(){
 
@@ -37,8 +36,8 @@ public class PrisonManager {
     }
 
 
-    public Cell getCell(UUID uuid){
-        return cellMap.get(uuid);
+    public Cell getCell(String name){
+        return cellMap.get(name);
     }
 
 }
