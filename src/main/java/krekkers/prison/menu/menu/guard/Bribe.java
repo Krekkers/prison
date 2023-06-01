@@ -1,13 +1,13 @@
-package krekkers.prison.menu.menu.cop;
+package krekkers.prison.menu.menu.guard;
 
-import krekkers.prison.cop.Cop;
+import krekkers.prison.guard.Guard;
 import krekkers.prison.menu.Menu;
 import krekkers.prison.menu.MenuUtility;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class Bribe extends Menu {
-    Cop cop;
+    Guard cop;
     /*
      The plan:
         - Player can add a item to a slot and if it's the right item the cop can get bribed.

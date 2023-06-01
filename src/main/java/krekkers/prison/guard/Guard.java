@@ -1,24 +1,22 @@
-package krekkers.prison.cop;
+package krekkers.prison.guard;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 
-import java.util.HashMap;
 import java.util.List;
 
-public class Cop {
+public class Guard {
 
-    Entity cop;
+    Entity guard;
     String name;
     int copID;
 
     Location spawn;
     private List<Location> destinationList;
-
     private boolean bribable;
     List<String> bribeItems;
 
-    public Cop(){
+    public Guard(){
 
     }
 
@@ -26,12 +24,12 @@ public class Cop {
 
     }
 
-    public Entity getCop() {
-        return cop;
+    public Entity getGuard() {
+        return guard;
     }
 
-    public void setCop(Entity cop) {
-        this.cop = cop;
+    public void setGuard(Entity cop) {
+        this.guard  = cop;
     }
 
     public String getName() {

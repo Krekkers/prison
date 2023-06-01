@@ -2,3 +2,21 @@ name: Prison
 version: '${project.version}'
 main: krekkers.prison.Prison
 api-version: 1.19
+
+commands:
+  holocreate:
+    description: "Creates a hologram"
+    permission: krekks.admin
+    permission-message: "You cannot create Holograms"
+  holopanic:
+    description: "Removes any armourstands in your area"
+    permission: krekks.admin
+    permission-message: "Calm down. No worries. Hakunamatata"
+  holoaddline:
+    description: "Adds a line to your hologram"
+    permission: krekks.admin
+    permission-message: "You cannot add lines to holograms silly"
+  holoremoveline:
+    description: "Removes a line"
+    permission: krekks.admin
+    permission-message: "You cannot remove lines you silly goose"

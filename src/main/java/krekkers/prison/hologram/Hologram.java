@@ -12,6 +12,8 @@ public class Hologram {
     Location location;
     double offset = -0.3;
     ArrayList<Entity> entities = new ArrayList<>();
+
+
     public Hologram(List<String> lines){
         Location lineLocation = location.clone();
         for(String s : lines){
