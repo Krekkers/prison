@@ -2,12 +2,13 @@ package krekkers.prison.guard;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Zombie;
 
 import java.util.List;
 
-public class Guard {
+public class Guard{
 
-    Entity guard;
+    Zombie guard;
     String name;
     int copID;
 
@@ -28,8 +29,8 @@ public class Guard {
         return guard;
     }
 
-    public void setGuard(Entity cop) {
-        this.guard  = cop;
+    public void setGuard(Zombie guard) {
+        this.guard  = guard;
     }
 
     public String getName() {
@@ -71,4 +72,9 @@ public class Guard {
     public void setBribeItems(List<String> bribeItems) {
         this.bribeItems = bribeItems;
     }
+
+    public void setGuardCurrentDestination(){
+
+    }
+
 }
