@@ -1,8 +1,9 @@
 package krekkers.prison.guard;
-
 import org.bukkit.Location;
+
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Zombie;
+
 
 import java.util.List;
 
@@ -17,13 +18,10 @@ public class Guard{
     private boolean bribable;
     List<String> bribeItems;
 
-    public Guard(){
+    public Guard(Location location){
 
     }
 
-    void setPathDestination(){
-
-    }
 
     public Entity getGuard() {
         return guard;
@@ -32,7 +30,6 @@ public class Guard{
     public void setGuard(Zombie guard) {
         this.guard  = guard;
     }
-
     public String getName() {
         return name;
     }
@@ -71,10 +68,6 @@ public class Guard{
 
     public void setBribeItems(List<String> bribeItems) {
         this.bribeItems = bribeItems;
-    }
-
-    public void setGuardCurrentDestination(){
-
     }
 
 }
